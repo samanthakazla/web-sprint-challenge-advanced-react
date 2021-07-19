@@ -129,4 +129,4 @@ Stateful logic is any code that uses state, but in the case of hooks I would def
 
 4. What are the three step of creating a successful test? What is done in each phase?
 You first arrange what you are going to test. 
-then you create the test and assert that the following requirements are meet. 
+then you create the test and assert that the following requirements are meet

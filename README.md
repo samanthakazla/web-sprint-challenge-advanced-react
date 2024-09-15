@@ -115,9 +115,18 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What are the main differences between a stateful and a functional component?
+Stateless components are simple functional component without having a local state but remember there is a hook in react to add state behavior in functional component as well.
+Stateful component can contains the state object and event handling function, user actions as well.
+Stateless component are pure in nature which does a very specific task.
 
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+setState() in componentWillMount() will not trigger a re-render, but we have never called render() at this point yet. So, setting state here will prepare the state object before we enter the first render() pass.
+componentWillUpdate() is called every time a re-render is required, such as when this.setState() is called. The reason we do not call this.setState() here is that the method triggers another componentWillUpdate(). If we trigger a state change in componentWillUpdate() we will end up in an infinite loop.
+
 
 3. Define stateful logic.
+Stateful logic is any code that uses state, but in the case of hooks I would define it as a behaviour created with the use of one or more hooks. It's like a perk that you're adding to a component.
 
 4. What are the three step of creating a successful test? What is done in each phase?
+You first arrange what you are going to test. 
+then you create the test and assert that the following requirements are meet
